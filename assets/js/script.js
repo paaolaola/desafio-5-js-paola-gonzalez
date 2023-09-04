@@ -66,9 +66,25 @@ btnAgregar.addEventListener("click", () => {
     cargarTareas();
 });
 
-// //Modificar status tareas
-// const index = listaTareas.findIndex(tareas)=> tarea.id === id
-// listaTareas[index].status = "Completada"
-// cargarTareas();
+// Funcion de la casilla
+const contarCasillasCheckeadas = () => {
+    const casillas = document.querySelectorAll("#casilla");
+    let casillasCheckeadas = 0;
 
-// if
+    casillas.forEach((casilla) => {
+        if (casilla.checked) {
+            casillasCheckeadas++;
+        }
+    });
+
+    realizadas.innerHTML = casillasCheckeadas;
+};
+
+//Evento de la casilla
+tareas.addEventListener("click", (e) => {
+    if (e.target && e.target.type === "checkbox") {
+        contarCasillasCheckeadas();
+    }
+});
+
+//
