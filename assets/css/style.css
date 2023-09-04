@@ -1,0 +1,69 @@
+body {
+    background-color: azure;
+    height: 100vh;
+}
+
+.boxContainer {
+    margin: 0;
+    display: flex;
+}
+
+.box {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+}
+
+input {
+    background-color: azure;
+    border-color: cornflowerblue;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 75%;
+    margin: 10px;
+}
+.btn-agregar {
+    background-color: cornflowerblue;
+    padding: 0.5rem;
+    margin: 10px;
+    border-radius: 5px;
+    border-style: none;
+    color: cornsilk;
+    width: 15%;
+}
+.dataTareas {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+h1 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+li {
+    list-style: none;
+    margin-right: 20px;
+}
+.boxTarea {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.btnsEliminar {
+    background-color: tomato;
+    font-weight: 600;
+    border-radius: 5px;
+}
