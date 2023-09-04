@@ -4,6 +4,7 @@ const input = document.querySelector("#input");
 const btnAgregar = document.querySelector("#btnAgregar");
 const data = document.querySelector("#cantidad");
 const tareas = document.querySelector("#tareas");
+const total = document.querySelector("#total");
 
 //Lista de tareas
 
@@ -19,7 +20,7 @@ const cargarTareas = () => {
 
         li.innerHTML = `
         <p>${tarea.nombre}</p>
-        <input type=checkbox>
+        <input id="casilla" type=checkbox>
         <button class="btnsEliminar">X</button>
         `;
 
@@ -31,6 +32,7 @@ const cargarTareas = () => {
     const btnsEliminar = document.querySelectorAll(".btnsEliminar");
     btnsEliminar.forEach((btnsEliminar) => {
         btnsEliminar.addEventListener("click", (e) => {
+            total.innerHTML = listaTareas.length - 1;
             const id = e.target.parentNode.id;
             console.log(e.target.parentNode.id);
 
@@ -51,6 +53,7 @@ const eliminarTarea = (id) => {
 
 //Evento del boton agregar
 btnAgregar.addEventListener("click", () => {
+    total.innerHTML = listaTareas.length + 1;
     const nombreTarea = input.value;
 
     listaTareas.push({
@@ -62,3 +65,10 @@ btnAgregar.addEventListener("click", () => {
     input.value = "";
     cargarTareas();
 });
+
+// //Modificar status tareas
+// const index = listaTareas.findIndex(tareas)=> tarea.id === id
+// listaTareas[index].status = "Completada"
+// cargarTareas();
+
+// if

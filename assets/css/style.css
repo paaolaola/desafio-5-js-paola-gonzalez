@@ -56,12 +56,10 @@ ul {
 li {
     list-style: none;
     margin-right: 20px;
-}
-.boxTarea {
-    list-style: none;
     display: flex;
     align-items: center;
 }
+
 .btnsEliminar {
     background-color: tomato;
     font-weight: 600;
