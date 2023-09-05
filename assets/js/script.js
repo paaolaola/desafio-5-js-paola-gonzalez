@@ -5,6 +5,7 @@ const btnAgregar = document.querySelector("#btnAgregar");
 const data = document.querySelector("#cantidad");
 const tareas = document.querySelector("#tareas");
 const total = document.querySelector("#total");
+const realizadas = document.querySelector("#realizadas");
 
 //Lista de tareas
 
@@ -19,9 +20,13 @@ const cargarTareas = () => {
         li.id = tarea.id;
 
         li.innerHTML = `
+        <div class= "numeroLista">
+        <h4>${tarea.numero}</h4>
+        </div>
         <p>${tarea.nombre}</p>
-        <input id="casilla" type=checkbox>
-        <button class="btnsEliminar">X</button>
+    <input id="casilla" type=checkbox>
+<button class="btnsEliminar">X</button>
+        
         `;
 
         // Agregar lista a ul
@@ -58,6 +63,7 @@ btnAgregar.addEventListener("click", () => {
 
     listaTareas.push({
         id: Date.now(),
+        numero: listaTareas.length + 1,
         nombre: nombreTarea,
     });
     console.log(listaTareas);
